@@ -1,0 +1,58 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KrishiDesk Agent: unattended ticket resolution</title>
+<style>
+:root{--g:#1b5e20;--bg:#f5f7f2;--card:#fff;--red:#b71c1c;--amb:#e65100;--mut:#5f6b5f}
+*{box-sizing:border-box}body{margin:0;font:15px/1.45 system-ui,sans-serif;background:var(--bg);color:#1c261c}
+header{background:var(--g);color:#fff;padding:14px 18px}header h1{margin:0;font-size:19px}header p{margin:2px 0 0;opacity:.85;font-size:13px}
+main{max-width:1100px;margin:0 auto;padding:14px;display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:900px){main{grid-template-columns:1fr 1fr}.wide{grid-column:1/3}}
+.card{background:var(--card);border-radius:10px;padding:14px;box-shadow:0 1px 3px #0002}.card h2{margin:0 0 8px;font-size:16px}
+textarea,input{width:100%;padding:8px;border:1px solid #bbb;border-radius:6px;font:inherit}
+button{background:var(--g);color:#fff;border:0;border-radius:6px;padding:8px 12px;font:inherit;cursor:pointer;margin:4px 4px 0 0}button.alt{background:#455a64}button.red{background:var(--red)}button:disabled{opacity:.5}
+.pill{display:inline-block;border-radius:10px;padding:1px 8px;font-size:12px;color:#fff;background:#607d8b;margin-right:4px}.resolved{background:#2e7d32}.escalated{background:var(--amb)}.new{background:#546e7a}.emerg{background:var(--red)}
+.t{border-top:1px solid #e3e8e0;padding:8px 0}.t small{color:var(--mut)}.rep{background:#f1f5ee;border-radius:6px;padding:6px 8px;margin-top:4px;font-size:13px;white-space:pre-wrap}
+.kpi{display:flex;gap:10px;flex-wrap:wrap}.kpi div{flex:1;min-width:90px;background:#eef3ea;border-radius:8px;padding:8px;text-align:center}.kpi b{display:block;font-size:20px}
+#audit{font:12px ui-monospace,monospace;max-height:260px;overflow:auto}#audit div{padding:2px 0;border-bottom:1px dotted #ddd}
+.banner{background:var(--red);color:#fff;padding:8px 14px;text-align:center;display:none}
+footer{padding:14px;text-align:center;color:var(--mut);font-size:12px}
+</style></head><body>
+<div class="banner" id="ban">KILL SWITCH ON: the agent is halted at the next tool call. Demo auto-resumes in 90 s.</div>
+<header><h1>KrishiDesk Agent: tickets resolved unattended, humans only when needed</h1><p>Farm help-desk tickets in, vetted answers or a human escalation out. Safety floor: poisoning, self-harm and chemical-dose questions are never answered by the agent. Built by Tab, an AI assistant, for team lead Akshay Wagh.</p></header>
+<main>
+<section class="card"><h2>1. Raise a ticket</h2>
+<textarea id="txt" rows="3" placeholder="Describe the farmer's problem..."></textarea>
+<input id="dist" placeholder="District (optional, used for outbreak detection)" style="margin-top:6px">
+<button onclick="send()">Submit ticket</button><button class="alt" onclick="seed()">Load 9 demo tickets</button><button class="alt" onclick="ex('My wheat has yellow rust patches, what should I do?')">Try: wheat rust</button><button class="alt" onclick="ex('She sprayed profenofos and now feels dizzy and is vomiting')">Try: poisoning</button>
+<div id="msg" style="color:var(--mut);font-size:13px;margin-top:6px"></div></section>
+<section class="card"><h2>2. Agent status</h2><div class="kpi" id="kpi"></div>
+<p style="margin:10px 0 0"><button class="red" id="kill" onclick="kill()">Kill switch</button><button class="alt" onclick="resume()">Resume agent</button></p>
+<div id="health" style="font-size:12px;color:var(--mut);margin-top:6px"></div></section>
+<section class="card wide"><h2>3. Ticket board <small id="n"></small></h2><div id="tickets"></div></section>
+<section class="card"><h2>4. Outbox (notifications the agent sent)</h2><div id="outbox" style="max-height:260px;overflow:auto;font-size:13px"></div></section>
+<section class="card"><h2>5. Audit log <small id="ver"></small></h2><div id="audit"></div></section>
+<section class="card wide"><h2>Outbreak alerts</h2><div id="alerts" style="font-size:13px">none yet</div></section>
+</main><footer>Open source (MIT): github.com/tab-for-akshay/krishidesk-agent-rush. Notification channels are simulated unless a webhook is configured. AI drafts are advisory; every chemical and emergency case goes to a human.</footer>
+<script>
+const $=id=>document.getElementById(id);const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+async function api(p,o){const r=await fetch(p,o);return r.json()}
+const post=(p,b)=>api(p,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(b||{})});
+function ex(t){$('txt').value=t}
+async function send(){const t=$('txt').value.trim();if(!t)return;const r=await post('/api/tickets',{text:t,source:'web',farmer:{district:$('dist').value}});$('msg').textContent=r.id?('Ticket '+r.id+' created; the agent picks it up within ~3 s.'):(r.error||'error');$('txt').value='';load()}
+async function seed(){await post('/api/seed');$('msg').textContent='9 demo tickets queued.';load()}
+async function kill(){await post('/api/kill',{reason:'pressed in demo UI'});load()}
+async function resume(){await post('/api/resume');load()}
+async function officer(id){const m=prompt('Officer reply to the farmer:');if(!m)return;const r=await post('/api/tickets/'+id+'/officer-reply',{officer:'demo officer',message:m});if(r.error)alert(r.error);load()}
+function pill(t){let c=t.status;if(t.queueKey==='emergency')c='emerg';return '<span class="pill '+c+'">'+esc(t.status)+'</span>'}
+async function load(){
+ const [st,tk,au,ob,al,h]=await Promise.all([api('/api/status'),api('/api/tickets'),api('/api/audit?n=40'),api('/api/outbox'),api('/api/alerts'),api('/api/health')]);
+ $('ban').style.display=st.killed?'block':'none';
+ const c=st.counters;$('kpi').innerHTML=[['Tickets in',c.ticketsIn],['Auto-resolved',c.autoResolved],['Escalated',c.escalated],['Tool calls',c.toolCalls],['Blocked',c.blockedCalls]].map(x=>'<div><b>'+x[1]+'</b>'+x[0]+'</div>').join('');
+ $('health').textContent='agent: '+h.agent+' | '+h.llm+' | uptime '+h.uptimeSec+' s';
+ $('n').textContent='('+tk.tickets.length+')';
+ $('tickets').innerHTML=tk.tickets.slice(0,30).map(t=>'<div class="t">'+pill(t)+'<b>'+esc(t.id)+'</b> '+esc(t.queue||'')+' <small>'+esc(t.category||'')+(t.crop?' / '+esc(t.crop):'')+(t.farmer.district?' / '+esc(t.farmer.district):'')+'</small><br>'+esc(t.text)+(t.reply?'<div class="rep">'+esc(t.reply)+'</div>':'')+(t.agentNote?'<small>'+esc(t.agentNote)+'</small>':'')+(t.officerReply?'<div class="rep"><b>Officer:</b> '+esc(t.officerReply)+'</div>':'')+(t.status==='escalated'&&!t.officerReply?'<br><small>Waiting for a human: '+esc(t.escalation&&t.escalation.reason)+'</small> <button class="alt" onclick="officer(\''+t.id+'\')">Officer reply</button>':'')+'</div>').join('');
+ $('audit').innerHTML=au.rows.map(r=>'<div>#'+r.n+' '+esc(r.ts.slice(11,19))+' <b>'+esc(r.actor)+'</b> '+esc(r.action)+' '+esc(JSON.stringify(r.detail)).slice(0,110)+'</div>').join('');
+ $('ver').textContent=au.verify.ok?'(hash chain verified, '+au.verify.rows+' rows)':'(CHAIN BROKEN at #'+au.verify.brokenAt+')';
+ $('outbox').innerHTML=ob.messages.slice(0,25).map(m=>'<div class="t"><small>'+esc(m.ts.slice(11,19))+' '+esc(m.channel)+' → '+esc(m.ticket)+(m.simulated?' (simulated)':'')+'</small><br>'+esc(m.message).slice(0,220)+'</div>').join('');
+ $('alerts').innerHTML=al.alerts.length?al.alerts.map(a=>'<div class="t"><b>'+esc(a.id)+'</b> '+esc(a.note)+' <small>('+a.tickets.join(', ')+')</small></div>').join(''):'none yet (3 pest reports on one crop in one district within 24 h raises one)';
+}
+load();setInterval(load,3000);
+</script></body></html>

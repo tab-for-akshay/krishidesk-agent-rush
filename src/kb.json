@@ -1,0 +1,476 @@
+[
+ {
+  "id": "scheme-pmkisan",
+  "type": "scheme",
+  "title": "PM-KISAN income support",
+  "crops": [
+   "*"
+  ],
+  "keywords": [
+   "pm-kisan",
+   "pm kisan",
+   "kisan samman",
+   "income support",
+   "6000",
+   "installment",
+   "instalment"
+  ],
+  "advice": "PM-KISAN gives eligible farmer families up to ₹6,000 a year as income support (announced in the Interim Union Budget, 1 Feb 2019; in effect from Dec 2018). For a missing instalment, check status and eKYC on the official portal or at the nearest Common Service Centre.",
+  "source": "https://en.wikipedia.org/wiki/Pradhan_Mantri_Kisan_Samman_Nidhi",
+  "portal": "https://pmkisan.gov.in/"
+ },
+ {
+  "id": "scheme-kcc",
+  "type": "scheme",
+  "title": "Kisan Credit Card (KCC)",
+  "crops": [
+   "*"
+  ],
+  "keywords": [
+   "kcc",
+   "kisan credit",
+   "credit card",
+   "loan",
+   "crop loan",
+   "working capital"
+  ],
+  "advice": "KCC (since Aug 1998, NABARD model scheme) gives short-term crop credit and term loans through commercial, regional rural and cooperative banks; since 2019 it also covers fisheries and animal husbandry. Card validity is five years. Holders get personal accident cover up to ₹50,000 for death/permanent disability.",
+  "source": "https://en.wikipedia.org/wiki/Kisan_Credit_Card"
+ },
+ {
+  "id": "scheme-shc",
+  "type": "scheme",
+  "title": "Soil Health Card",
+  "crops": [
+   "*"
+  ],
+  "keywords": [
+   "soil health",
+   "soil test",
+   "soil card",
+   "fertiliser dose",
+   "fertilizer dose",
+   "npk",
+   "micronutrient"
+  ],
+  "advice": "The Soil Health Card scheme (launched 19 Feb 2015) tests farm soil and gives crop-wise nutrient and fertiliser recommendations, to promote soil-test-based, balanced fertiliser use. Ask the farmer for a recent card before advising doses.",
+  "source": "https://en.wikipedia.org/wiki/Soil_Health_Card_Scheme"
+ },
+ {
+  "id": "scheme-enam",
+  "type": "market",
+  "title": "e-NAM online mandi",
+  "crops": [
+   "*"
+  ],
+  "keywords": [
+   "e-nam",
+   "enam",
+   "mandi",
+   "price",
+   "sell",
+   "market",
+   "trader",
+   "rate"
+  ],
+  "advice": "e-NAM is the national online trading platform for agricultural commodities: produce is weighed, lifted and paid for online, which helps price discovery. Check whether the farmer's local APMC mandi is on e-NAM.",
+  "source": "https://en.wikipedia.org/wiki/National_Agriculture_Market"
+ },
+ {
+  "id": "scheme-pmfby",
+  "type": "insurance",
+  "title": "PMFBY crop insurance",
+  "crops": [
+   "*"
+  ],
+  "keywords": [
+   "pmfby",
+   "fasal bima",
+   "insurance",
+   "claim",
+   "crop loss",
+   "hail",
+   "flood",
+   "drought"
+  ],
+  "advice": "PMFBY insures food and oilseed crops and annual commercial/horticultural crops (where past yield data exists) against crop failure. Some states have exited the scheme (e.g. Gujarat in Aug 2020; Punjab never joined), so confirm the farmer's state first. Escalate claim disputes to the district agriculture office.",
+  "source": "https://en.wikipedia.org/wiki/Pradhan_Mantri_Fasal_Bima_Yojana"
+ },
+ {
+  "id": "pest-faw",
+  "type": "pest",
+  "title": "Fall armyworm (Spodoptera frugiperda) in maize",
+  "crops": [
+   "maize",
+   "corn",
+   "makka"
+  ],
+  "keywords": [
+   "armyworm",
+   "fall armyworm",
+   "spodoptera",
+   "whorl",
+   "caterpillar",
+   "larva",
+   "leaves eaten",
+   "frass"
+  ],
+  "advice": "Signs: young larvae scrape the leaf surface; older larvae feed in the central whorl, causing heavy defoliation; whorl, tassel and cob can be eaten. Identify: 4 black spots in a square on the 8th–9th abdominal segment and an inverted 'Y' on the head. Steps: neem cake 250 kg/ha at last ploughing; border crop of cowpea, gingelly, redgram or sunflower (garden land) or fodder sorghum (dry land), 3 rows; FAW pheromone traps 12/ha; Metarhizium anisopliae as a biological option. TNAU also lists chemical options with doses; KrishiDesk never drafts a pesticide name or dose. A human expert confirms any chemical step.",
+  "source": "https://agritech.tnau.ac.in/crop_protection/maize/crop_prot_maize_fall_armyworm.html",
+  "expert_review": true
+ },
+ {
+  "id": "pest-pbw",
+  "type": "pest",
+  "title": "Pink bollworm in cotton",
+  "crops": [
+   "cotton",
+   "kapas"
+  ],
+  "keywords": [
+   "pink bollworm",
+   "bollworm",
+   "boll",
+   "pectinophora",
+   "rosette",
+   "larva in boll"
+  ],
+  "advice": "Signs: rosetted flowers; excreta at bore holes; larvae bore between locules and form 'double seeds'; attacked buds and young bolls drop; discoloured lint and burrowed seeds. Threshold: 10% infested fruiting parts or 8 moths per trap. Monitor with pheromone traps 5/acre. TNAU also lists chemical options with doses; KrishiDesk never drafts a pesticide name or dose. A human expert confirms any chemical step.",
+  "source": "https://agritech.tnau.ac.in/crop_protection/cotton/crop_prot_crop_insectpest%20_cotton_2.html",
+  "expert_review": true
+ },
+ {
+  "id": "ipm-threshold",
+  "type": "ipm",
+  "title": "IPM: act at the economic threshold",
+  "crops": [
+   "*"
+  ],
+  "keywords": [
+   "spray",
+   "pesticide",
+   "insecticide",
+   "when to spray",
+   "threshold",
+   "ipm"
+  ],
+  "advice": "IPM controls pests rather than eradicating them: spray only when the pest population reaches the economic threshold, i.e. the level at which action prevents damage that would cost more than the treatment (economic injury level). Thresholds are pest- and site-specific.",
+  "source": "https://en.wikipedia.org/wiki/Integrated_pest_management"
+ },
+ {
+  "id": "rice-stem-borer",
+  "type": "pest",
+  "title": "Rice yellow stem borer (dead heart / white ear)",
+  "crops": [
+   "rice",
+   "paddy"
+  ],
+  "keywords": [
+   "stem borer",
+   "borer",
+   "dead heart",
+   "deadheart",
+   "white ear",
+   "whitehead",
+   "central shoot drying",
+   "shoot drying",
+   "panicle dry"
+  ],
+  "advice": "Signs: central shoot dries (dead heart); in older crop the whole panicle dries white (white ear); affected shoots pull out easily; brown egg masses near leaf tips. Action threshold: 10% dead heart or 2% white ear. Non-chemical steps: clip seedling tips before transplanting to remove egg masses; light trap 1/ha and pheromone traps 5/acre; release the egg parasitoid Trichogramma japonicum; neem seed kernel extract 5%. TNAU also lists chemical options with doses; KrishiDesk never drafts a pesticide name or dose. A human expert confirms any chemical step.",
+  "source": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_m1.html",
+  "expert_review": true
+ },
+ {
+  "id": "rice-bph",
+  "type": "pest",
+  "title": "Rice brown planthopper (hopper burn)",
+  "crops": [
+   "rice",
+   "paddy"
+  ],
+  "keywords": [
+   "planthopper",
+   "plant hopper",
+   "hopper",
+   "bph",
+   "hopper burn",
+   "hopperburn",
+   "circular patches",
+   "drying patches",
+   "base of the plant",
+   "sooty"
+  ],
+  "advice": "Signs: hoppers crowd at the plant base above the water; plants dry in circular patches ('hopper burn'); sooty mould at the base. Threshold: 1 hopper per tiller (2 if spiders are present). Steps: avoid close planting and leave 30 cm alleys every 2.5–3 m; alternate wetting and drying; avoid excess nitrogen; light or yellow pan traps; drain water before any spray and aim at the plant base; neem oil 3%. TNAU also lists chemical options with doses; KrishiDesk never drafts a pesticide name or dose. A human expert confirms any chemical step.",
+  "source": "https://agritech.tnau.ac.in/crop_protection/rice/crop_prot_crop_insectpest%20_cereals_paddy_12.html",
+  "expert_review": true
+ },
+ {
+  "id": "rice-blast",
+  "type": "disease",
+  "title": "Rice blast",
+  "crops": [
+   "rice",
+   "paddy"
+  ],
+  "keywords": [
+   "blast",
+   "spindle",
+   "diamond",
+   "grey centre",
+   "gray center",
+   "neck rot",
+   "neck blast",
+   "nodal",
+   "burnt",
+   "leaf spots"
+  ],
+  "advice": "Signs: spindle-shaped leaf spots with a grey centre and dark brown margin; spots merge and leaves dry; nursery or field looks burnt; black lesions on nodes; grey-brown neck lesions make panicles fall over (no grain if before milk stage). Look-alike: white panicles can also come from stem borer or water stress, so check for spindle spots. Send a clear photo of the leaf and neck for an expert to confirm before any spray.",
+  "source": "https://agritech.tnau.ac.in/crop_protection/rice_diseases/rice_1.html",
+  "expert_review": true
+ },
+ {
+  "id": "rice-blb",
+  "type": "disease",
+  "title": "Rice bacterial leaf blight",
+  "crops": [
+   "rice",
+   "paddy"
+  ],
+  "keywords": [
+   "bacterial",
+   "leaf blight",
+   "blb",
+   "kresek",
+   "straw yellow",
+   "wavy margin",
+   "leaf tip drying",
+   "ooze",
+   "yellow margin",
+   "yellowing from tip"
+  ],
+  "advice": "Signs: in the nursery, yellow spots at the leaf margin that merge and dry the foliage; 'kresek' wilt of seedlings 1–2 weeks after transplanting (bacteria enter through cut leaf tips and kill the whole seedling); in older plants, water-soaked lesions near the leaf margin that grow with a wavy edge and turn straw-yellow within days. Avoid clipping leaf tips at transplanting where the disease occurs. Expert to confirm from a photo and advise.",
+  "source": "https://agritech.tnau.ac.in/crop_protection/rice_diseases/rice_3.html",
+  "expert_review": true
+ },
+ {
+  "id": "rice-yellowing",
+  "type": "nutrient",
+  "title": "Rice leaves turning yellow: check these first",
+  "crops": [
+   "rice",
+   "paddy"
+  ],
+  "keywords": [
+   "yellow",
+   "yellowing",
+   "pale",
+   "turning yellow",
+   "leaves yellow",
+   "chlorotic",
+   "rusty",
+   "brown rusty",
+   "stunted"
+  ],
+  "advice": "Yellow rice leaves have several causes. Nitrogen deficiency: plants stunted and yellow, starting on the LOWER leaves and from the leaf tip along the midrib. Zinc deficiency: lower leaves chlorotic toward the base, plants look brown and rusty. Potassium: bluish-green young leaves, older leaves with chlorotic/necrotic areas, weak straw. Bacterial leaf blight: yellow lesions with wavy margins from the leaf edge (see the blight advisory). Ask the farmer which leaves turned yellow first and for a photo; a soil test (Soil Health Card) settles nutrient questions.",
+  "source": "https://www.agritech.tnau.ac.in/agriculture/agri_cropproduction_cereals_rice_tranpudlow_mainfield_nutrient_mgmt_deficiency.html"
+ },
+ {
+  "id": "tomato-leaf-curl",
+  "type": "disease",
+  "title": "Tomato leaf curl virus (spread by whitefly)",
+  "crops": [
+   "tomato"
+  ],
+  "keywords": [
+   "leaf curl",
+   "curl",
+   "curling",
+   "crinkle",
+   "stunted",
+   "bushy",
+   "whitefly",
+   "white fly",
+   "leathery"
+  ],
+  "advice": "Signs: severe stunting, leaves roll downward and crinkle, old leaves leathery and brittle, short internodes, bushy look. Spread by whiteflies (Bemisia tabaci). Steps: raise the nursery under protection (net); sow sorghum, maize or bajra as a barrier crop; disease-free seed; yellow sticky traps 5/acre; remove the weed host Abutilon indicum. A virus cannot be cured; pull out infected plants early. TNAU also lists chemical options with doses; KrishiDesk never drafts a pesticide name or dose. A human expert confirms any chemical step.",
+  "source": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_6.html",
+  "expert_review": true
+ },
+ {
+  "id": "tomato-early-blight",
+  "type": "disease",
+  "title": "Tomato early blight",
+  "crops": [
+   "tomato"
+  ],
+  "keywords": [
+   "early blight",
+   "blight",
+   "concentric",
+   "bull's eye",
+   "bullseye",
+   "rings",
+   "brown spots",
+   "spots",
+   "leaf spot"
+  ],
+  "advice": "Signs: brown leaf spots with concentric rings (bull's-eye) and a yellow margin; fruit infected at the calyx/stem end with brown rings. Favoured by warm, humid, rainy weather (24–29 °C). Steps: remove and destroy crop debris; rotate crops; seed treatment with Trichoderma asperellum 4 g/kg. TNAU also lists chemical options with doses; KrishiDesk never drafts a pesticide name or dose. A human expert confirms any chemical step.",
+  "source": "https://agritech.tnau.ac.in/crop_protection/tomato_diseases_2.html",
+  "expert_review": true
+ },
+ {
+  "id": "tomato-fruit-borer",
+  "type": "pest",
+  "title": "Tomato fruit borer (Helicoverpa armigera)",
+  "crops": [
+   "tomato"
+  ],
+  "keywords": [
+   "fruit borer",
+   "borer",
+   "holes in fruit",
+   "hole",
+   "caterpillar",
+   "larva",
+   "worm in fruit",
+   "bored fruit"
+  ],
+  "advice": "Signs: round holes in fruit; the caterpillar pushes only part of its body inside. Steps: collect and destroy damaged fruits and grown caterpillars; grow African/American tall marigold as a trap crop (1 row per 16 tomato rows); pheromone traps 12/ha; release Trichogramma pretiosum weekly from flowering; HaNPV biopesticide. TNAU also lists chemical options with doses; KrishiDesk never drafts a pesticide name or dose. A human expert confirms any chemical step.",
+  "source": "https://agritech.tnau.ac.in/crop_protection/tomato/tomato_1.html",
+  "expert_review": true
+ },
+ {
+  "id": "cotton-whitefly",
+  "type": "pest",
+  "title": "Cotton whitefly",
+  "crops": [
+   "cotton"
+  ],
+  "keywords": [
+   "whitefly",
+   "white fly",
+   "sooty",
+   "yellowing",
+   "leaf curl",
+   "sticky"
+  ],
+  "advice": "Signs: chlorotic spots that merge into yellowing from veins outward, sooty mould, early leaf drop, shedding of buds and bolls; it also transmits cotton leaf curl virus. Threshold: 5–10 per leaf. Steps: avoid other whitefly host crops nearby; one cotton crop a year per tract; rotate with sorghum, ragi or maize; remove weed hosts such as Abutilon indicum; recommended spacing and no excess nitrogen; avoid late sowing. TNAU also lists chemical options with doses; KrishiDesk never drafts a pesticide name or dose. A human expert confirms any chemical step.",
+  "source": "https://agritech.tnau.ac.in/ta/crop_protection/cotton/crop_prot_crop_insectpest%20_cotton_13.html",
+  "expert_review": true
+ },
+ {
+  "id": "chilli-thrips",
+  "type": "pest",
+  "title": "Chilli thrips (leaf curl upward)",
+  "crops": [
+   "chilli"
+  ],
+  "keywords": [
+   "thrips",
+   "curl",
+   "upward curl",
+   "crinkle",
+   "murda",
+   "leaf curl"
+  ],
+  "advice": "Signs: leaves crinkle and curl UPWARD, petioles elongate, buds turn brittle and drop, stunted growth. Steps: intercrop with agathi (Sesbania grandiflora) for shade; do not grow chilli after sorghum; do not mix chilli and onion; sprinkle water over seedlings to check thrips. TNAU also lists chemical options with doses; KrishiDesk never drafts a pesticide name or dose. A human expert confirms any chemical step.",
+  "source": "https://agritech.tnau.ac.in/crop_protection/chilli/chilli_1.html",
+  "expert_review": true
+ },
+ {
+  "id": "onion-thrips",
+  "type": "pest",
+  "title": "Onion thrips",
+  "crops": [
+   "onion"
+  ],
+  "keywords": [
+   "thrips",
+   "silvery",
+   "white patches",
+   "silver",
+   "tip drying",
+   "leaves drying"
+  ],
+  "advice": "Signs: small white silvery patches all over leaves; in severe attack leaves dry from the tip down. Steps: clean cultivation and regular hoeing; flooding the infested field checks thrips. TNAU also lists chemical options with doses; KrishiDesk never drafts a pesticide name or dose. A human expert confirms any chemical step.",
+  "source": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop_insect-veg_onion_pest&disease.html",
+  "expert_review": true
+ },
+ {
+  "id": "wheat-rust",
+  "type": "disease",
+  "title": "Wheat rusts (brown, black, yellow)",
+  "crops": [
+   "wheat"
+  ],
+  "keywords": [
+   "rust",
+   "yellow rust",
+   "stripe",
+   "brown rust",
+   "black rust",
+   "orange powder",
+   "pustules"
+  ],
+  "advice": "Wheat has three rusts: leaf/brown rust (Puccinia recondita), stem/black rust (P. graminis tritici) and stripe/yellow rust (P. striiformis). Steps from TNAU: mixed cropping and crop rotation; avoid excess nitrogen; grow resistant varieties. TNAU also lists chemical options with doses; KrishiDesk never drafts a pesticide name or dose. A human expert confirms any chemical step.",
+  "source": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop%20diseases_cereals_wheat.html",
+  "expert_review": true
+ },
+ {
+  "id": "mango-hopper",
+  "type": "pest",
+  "title": "Mango hoppers",
+  "crops": [
+   "mango"
+  ],
+  "keywords": [
+   "hopper",
+   "flower drop",
+   "flowers dropping",
+   "inflorescence",
+   "honeydew",
+   "sooty",
+   "flowering"
+  ],
+  "advice": "Signs: nymphs and adults suck sap from the flower panicle; flowers wither and shed; honeydew and sooty mould on leaves. Steps: avoid close planting (worst in overcrowded orchards); keep orchards clean by ploughing and weeding; neem oil 3% or neem seed kernel extract 5%. Timing matters: sprays are at panicle emergence and two weeks later. TNAU also lists chemical options with doses; KrishiDesk never drafts a pesticide name or dose. A human expert confirms any chemical step.",
+  "source": "https://agritech.tnau.ac.in/crop_protection/mango/mango_4.html",
+  "expert_review": true
+ },
+ {
+  "id": "sugarcane-esb",
+  "type": "pest",
+  "title": "Sugarcane early shoot borer",
+  "crops": [
+   "sugarcane"
+  ],
+  "keywords": [
+   "shoot borer",
+   "dead heart",
+   "deadheart",
+   "early shoot",
+   "central shoot",
+   "borer"
+  ],
+  "advice": "Signs: dead heart in 1–3 month-old cane that pulls out easily. Threshold 15% dead heart. Steps: resistant varieties (e.g. Co 312, Co 421, Co 661, Co 917, Co 853); early planting in December–January; intercrop with daincha; trash mulch 10–15 cm along ridges 3 days after planting; keep soil moist; partial earthing up at 45 days; remove dead hearts; pheromone traps 10/ha for monitoring; granulosis virus as a biological option.",
+  "source": "https://agritech.tnau.ac.in/crop_protection/crop_prot_crop_insectpest%20_sugarcane_1.html"
+ },
+ {
+  "id": "banana-aphid",
+  "type": "pest",
+  "title": "Banana aphid (carrier of bunchy top virus)",
+  "crops": [
+   "banana"
+  ],
+  "keywords": [
+   "bunchy top",
+   "bunchy",
+   "aphid",
+   "aphids",
+   "bunched leaves",
+   "dark green streaks"
+  ],
+  "advice": "Banana bunchy top is spread by the banana aphid. Steps: clean cultivation; plant only healthy, pest-free suckers; destroy diseased plants together with the rhizome; encourage predators (ladybird beetles, Chrysoperla); the fungus Beauveria bassiana is a biological option. TNAU also lists chemical options with doses; KrishiDesk never drafts a pesticide name or dose. A human expert confirms any chemical step.",
+  "source": "https://agritech.tnau.ac.in/crop_protection/banana_pest/banana_3.html",
+  "expert_review": true
+ }
+]

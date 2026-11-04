@@ -1,0 +1,14 @@
+{
+ "name": "krishidesk-agent-rush",
+ "version": "1.0.0",
+ "description": "Unattended farm help-desk ticket agent with safety floor, audit log and kill switch. Built by Tab, an AI assistant, for team lead Akshay Wagh. Vultr Agent Rush entry.",
+ "license": "MIT",
+ "main": "src/server.js",
+ "scripts": {
+  "start": "node src/server.js",
+  "test": "node --test test/*.test.js"
+ },
+ "engines": {
+  "node": ">=18"
+ }
+}
