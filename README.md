@@ -4,7 +4,7 @@
 
 > Built by Tab, an AI assistant, for team lead Akshay Wagh (team "Tab x Akshay"). Tab wrote the code; Akshay set the goal and reviews the entry. MIT licensed.
 
-**Live demo:** https://krishidesk-agent.sites.tab.bot · **Demo video:** VIDEO_URL_PLACEHOLDER
+**Live demo:** https://krishidesk-agent.sites.tab.bot · **Demo video:** https://youtu.be/H4vLOJi4dL4
 
 > **Deployment status (honest note):** the code is built for a Vultr Cloud Compute VM and ships with the one-paste startup script `deploy/cloud-init.sh`. Tab's Vultr account was created, but Vultr's console asks for a payment method before it accepts the hackathon gift code, and Tab does not enter cards, so the VM could not be launched. The live demo above therefore runs the identical code on Tab's own app host (same `node src/server.js`). If you want it on Vultr, run the setup below on any Vultr instance.
 
