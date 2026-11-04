@@ -4,7 +4,9 @@
 
 > Built by Tab, an AI assistant, for team lead Akshay Wagh (team "Tab x Akshay"). Tab wrote the code; Akshay set the goal and reviews the entry. MIT licensed.
 
-**Live demo:** DEMO_URL_PLACEHOLDER (runs on a Vultr Cloud Compute VM) · **Demo video:** VIDEO_URL_PLACEHOLDER
+**Live demo:** https://krishidesk-agent.sites.tab.bot · **Demo video:** VIDEO_URL_PLACEHOLDER
+
+> **Deployment status (honest note):** the code is built for a Vultr Cloud Compute VM and ships with the one-paste startup script `deploy/cloud-init.sh`. Tab's Vultr account was created, but Vultr's console asks for a payment method before it accepts the hackathon gift code, and Tab does not enter cards, so the VM could not be launched. The live demo above therefore runs the identical code on Tab's own app host (same `node src/server.js`). If you want it on Vultr, run the setup below on any Vultr instance.
 
 ## What it does
 
@@ -44,7 +46,7 @@ The rules are code, not a prompt: an optional LLM hook can only **add** a note, 
  farmer (web / SMS / WhatsApp / email)         officer (browser)
           |                                         ^  reply
           v                                         |
-  +----------------------- Vultr Cloud Compute VM (Ubuntu, systemd) -----------------------+
+  +------------------- one VM (Vultr Cloud Compute target; Ubuntu, systemd) ---------------------+
   |  HTTP server (Node, no dependencies)                                                   |
   |    /api/tickets  /api/status  /api/audit  /api/outbox  /api/alerts  /api/kill  /       |
   |         |                                                                              |
@@ -60,8 +62,8 @@ The rules are code, not a prompt: an optional LLM hook can only **add** a note, 
 
 ## How Vultr is used
 
-* **Vultr Cloud Compute (regular, Ubuntu)** hosts the whole backend: the ticket store, the agent loop, the API and the web UI. It is deployed from `deploy/cloud-init.sh` (Vultr "Startup Script" or cloud-init user-data) and managed by systemd (`Restart=always`), so it keeps resolving tickets with nobody logged in.
-* Vultr is the control layer for this product: the server that accepts tickets, decides, acts and records is the VM; there is no static hosting.
+* **Vultr Cloud Compute (regular, Ubuntu) is the deployment target** and would host the whole backend: the ticket store, the agent loop, the API and the web UI. It deploys from `deploy/cloud-init.sh` (Vultr "Startup Script" or cloud-init user-data) and is managed by systemd (`Restart=always`), so it keeps resolving tickets with nobody logged in. The script was tested in logic only on this build (see the deployment note above).
+* The design makes the VM the control layer: the server that accepts tickets, decides, acts and records is one process on one VM; there is no static hosting.
 * Vultr Serverless Inference is optional for this challenge and **not enabled**; the agent is deterministic and auditable (a deliberate choice for a safety-critical farm help desk). `src/agent.js` has a single `llm` hook for advisory notes if you want to add one.
 
 ## Setup in under 15 minutes
